@@ -1,0 +1,41 @@
+---
+title: "CodeBook"
+author: "diana"
+date: "14 de junio de 2016"
+output: html_document
+---
+
+#CODEBOOK
+##Fuente:
+
+Jorge L. Reyes-Ortiz (1,2), Davide Anguita (1), Alessandro Ghio (1), Luca Oneto (1) y Xavier Parra (2)
+1 - Laboratorio de Sistemas Complejos no lineal - Smartlab
+Diten - Università degli Studi di Genova, Génova (I-16145), Italia.
+2 - CETpD - Centro de Investigación Técnica de Atención a la Dependencia y la Vida Autónoma
+Universidad Politécnica de Cataluña (BarcelonaTech). Vilanova i la Geltrú (08800), España
+activityrecognition '@' smartlab.ws
+
+
+##Los datos Conjunto de Información:
+
+Los experimentos se han llevado a cabo con un grupo de 30 voluntarios dentro de un grupo de edad de 19-48 años. Cada persona lleva a cabo seis actividades (caminar, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, sentado, de pie, Acostado) que lleva un teléfono inteligente (Samsung Galaxy S II) en la cintura. A través de su acelerómetro incorporado y giroscopio, hemos capturado aceleración lineal 3-axial y velocidad angular 3-axial a una velocidad constante de 50 Hz. Los experimentos han sido grabadas en vídeo para etiquetar los datos de forma manual. El conjunto de datos obtenidos se ha dividido aleatoriamente en dos grupos, en los que se seleccionó el 70% de los voluntarios para la generación de los datos de entrenamiento y 30% de los datos de prueba.
+
+Las señales del sensor (acelerómetro y giroscopio) fueron pre-procesados mediante la aplicación de filtros de ruido y luego se muestrean en deslizamiento de ancho fijo ventanas de 2,56 seg y 50% de solapamiento (128 lecturas / ventana). La señal de aceleración del sensor, que tiene componentes gravitacionales y el movimiento del cuerpo, se separó usando un filtro de paso bajo Butterworth en aceleración cuerpo y la gravedad. La fuerza de la gravedad se supone que tiene sólo componentes de baja frecuencia, por lo tanto, se utilizó un filtro con 0,3 Hz frecuencia de corte. A partir de cada ventana, un vector de características se obtuvo mediante el cálculo de las variables de tiempo y el dominio de la frecuencia.
+
+Compruebe el archivo readme.txt para obtener más detalles sobre este conjunto de datos.
+
+Un video del experimento, con un ejemplo de las 6 actividades grabadas con uno de los participantes se puede ver en el siguiente enlace: [enlace]
+
+Una versión actualizada de este conjunto de datos se puede encontrar en [enlace web]. Incluye las etiquetas de las transiciones posturales entre las actividades y también las señales inerciales primas completas en lugar de los pre-procesado en ventanas.
+
+
+##La información de atributos:
+
+Para cada registro en el conjunto de datos que se proporciona:
+- Aceleración triaxial del acelerómetro (aceleración total) y la aceleración corporal estimada.
+- Triaxial velocidad angular del giroscopio.
+- Un vector 561-función con variables de tiempo y el dominio de la frecuencia.
+- Su etiqueta de actividad.
+- Un identificador del sujeto que lleva a cabo el experimento.
+
+

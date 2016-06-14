@@ -1,0 +1,21 @@
+---
+title: "readme"
+author: "diana"
+date: "14 de junio de 2016"
+output: html_document
+---
+
+
+#Analisis de PROYECTO FINAL
+
+El proceso PROYECTO FINAL comienza a leer los datos en bruto de los diferentes archivos: features.txt (Lista de todas las funciones), activity_labels.txt (links la clase de etiquetas con su nombre de la actividad), /train/subject_train.txt (Cada fila identifica la sujeto que lleva a cabo la actividad para cada muestra ventana. Su rango es de 1 a 30), /train/x_train.txt (conjunto de entrenamiento), /train/y_train.txt (etiquetas de formación), /test/subject_test.txt (igual que /train/subject_train.txt), /test/x_test.txt (conjunto de prueba), /test/y_test.txt (etiquetas de prueba).
+
+Una vez que se ha leído los datos en bruto, se cambian los nombres de la columna que se ocuparan  con nombres descriptivos, las fuciones de trainig conjunto de datos y la prueba de conjunto de datos por columnas, y se funden ambos conjuntos de datos por filas para hacer un conjunto de datos, "TrainingTest".
+
+Despues: 'Extraigo sólo las mediciones en la media y la desviación estándar para cada medición', run_analysis.R extractos de los nombres de columna que puede para procesarlas, en busca de los personajes: "-mean (", "subjectId" -std " "y" ActivityId ". Una vez que tuvimos los COLNAMES Correspondientes, se extrae a" MeanStd".
+
+3.Usando nombres descriptivos de actividad para nombrar las actividades en el conjunto de datos: En este punto, sólo se tiene que fusionar el conjunto de datos, MeanStd, con el conjunto de datos de la 'activity_labels.txt' archivo, obteniendo 'MeanStdFinal'.
+
+Se unen el conjunto de datos con los nombres de las variables descriptivas: extrae los COLNAMES de 'MeanStdFinal' a un vector de caracteres, elimina '()' y reemplaza caracteres para que sean amables, re-etiquetado  los COLNAMES del conjunto de datos.
+
+Por último, se crean los datos ordenado independientes establecidos con la media de cada variable para cada actividad y cada tema, 'PROYECTO FINAL' quito 'ActivityId' es redundante (MeanStdFinal tiene la columna 'activityType'), se funde MeanStdFinal, contando es que el vAR ID son "activityType" y "subjectId", para calcular la media para cada uno de ellos. Entonces se pone en la trama de datos fundidos 'AverageData' en la trama de datos 'Normal'. Una vez que se obtenga el de la media de cada variable para cada actividad y cada sujeto, PROYECTO FINAl guarda  el resultado 'Normal' en un archivo txt, "ordenados.txt".
